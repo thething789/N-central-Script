@@ -14,5 +14,4 @@ This folder includes custom monitoring scripts for advanced use cases in **N-Cen
 
 ## 📜 Scripts Included
 
-- **Script Name 1**: Brief description.
-- **Script Name 2**: Brief description.
+- **Bitdefender Status**: Monitor if Bitdefender Endpoint Security Tools are installed
