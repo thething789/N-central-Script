@@ -57,8 +57,8 @@ This script detects duplicate assets in the **N-Central RMM** console by leverag
 
 | Parameter          | Description                           | Required | Example                        |
 |--------------------|---------------------------------------|----------|--------------------------------|
-| `$ncentral_uri`    | N-Central API base URL                | Yes      | `https://n-central.example.com`|
+| `$NcentralUri`    | N-Central API base URL                | Yes      | `https://n-central.example.com`|
 | `$jwt`             | API key for authentication            | Yes      | `your-api-key`                 |
 | `$customPropertyID`| Name of the custom property to update | Yes      | `id-of-the-custom-property`    |
 | `$regex`           | Regex pattern for asset names         | Yes      | `^[A-Z]+-\d+(-\d+)?$`          |
-| `$filter`          | Filter ID to apply script on specific assets  | Yes      | `id-of-the-filter`  |
+| `$filterID`          | Filter ID to apply script on specific assets  | Yes      | `id-of-the-filter`  |

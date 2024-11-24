@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><Policy ID="6e7ba020-5993-46a3-b23f-bd59308777c6" Name="Statut Anti-Virus" Description="U3RhdHV0IEFudGktVmlydXM=" Version="2.10.0.19" RemoteCategory="0" ExecutionType="Local" MinimumPSVersionRequired="0.0.0">
+  <Object ID="{0355d468-6063-4b13-adb2-49cbf56ca20c}" Type="{B6FA6D8B-EEAA-47A6-8463-7F9A4F5BBB6E}" Data="&lt;xml&gt;&lt;OutputParameters&gt;&lt;Parameter ParameterName=&quot;AVName&quot; Label=&quot;Nom de l'antivirus&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.AVName&quot; /&gt;&lt;Parameter ParameterName=&quot;AVUpdateStatus&quot; Label=&quot;Mise à jour de l'antivirus&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.AVUpdateStatus&quot; /&gt;&lt;Parameter ParameterName=&quot;AVProtection&quot; Label=&quot;Protection en temps réel&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.AVProtection&quot; /&gt;&lt;/OutputParameters&gt;&lt;/xml&gt;" />
+  <LinkManager xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/PolicyExecutor">
+    <hashset xmlns:d2p1="http://schemas.datacontract.org/2004/07/System">
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>7842a9d9-5ab5-4e37-8ea6-e186301d5925.AVName</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>AVName</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>7842a9d9-5ab5-4e37-8ea6-e186301d5925.AVUpdateStatus</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>AVUpdateStatus</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>7842a9d9-5ab5-4e37-8ea6-e186301d5925.AVProtection</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>AVProtection</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+    </hashset>
+  </LinkManager>
+  <Diagnostics OriginalVersion="2.96.0.1" />
+  <Activity mc:Ignorable="sads sap" x:Class="Policy Builder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PolicyExecutor;assembly=PolicyExecutionEngine" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <x:Members>
+      <x:Property Name="PolicyGUID" Type="InArgument(x:String)" />
+    </x:Members>
+    <sap:VirtualizedContainerService.HintSize>489.6,568.8</sap:VirtualizedContainerService.HintSize>
+    <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+    <p:PolicySequence DisplayName="Policy Builder" sap:VirtualizedContainerService.HintSize="489.6,568.8" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+      <p:PolicySequence.Activities>
+        <p:RunPowerShellScript AssemblyName="PolicyExecutionEngine, Version=2.40.0.10, Culture=neutral, PublicKeyToken=null" DisplayName="Run PowerShell Script" sap:VirtualizedContainerService.HintSize="452.8,345.6" Moniker="7842a9d9-5ab5-4e37-8ea6-e186301d5925" OutPut_64="[RunPowerShellScript_OutPut_64]" Result="[RunPowerShellScript_Result]" ResultString="[RunPowerShellScript_ResultString]" Results_x64="[RunPowerShellScript_Results_x64]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="RunPowerShellScript" genArgEvent="d19cd435-85b3-44b7-ab0c-4915ea99a2c7" m_bTextLinkChange="False" script="JAB3AG0AaQBlAHIAcgBvAHIAIAA9ACAAJABuAHUAbABsAA0ACgAkAEcAZQB0AFMAZQByAHYAaQBjAGUAIAA9ACAAJABuAHUAbABsAA0ACgAkAEEAVgANAAoADQAKACQAQQBWAFAAcgBvAGQAdQBjAHQAIAA9ACAARwBlAHQALQBXAG0AaQBPAGIAagBlAGMAdAAgAC0ATgBhAG0AZQBzAHAAYQBjAGUAIAByAG8AbwB0AFwAUwBlAGMAdQByAGkAdAB5AEMAZQBuAHQAZQByADIAIAAtAEMAbABhAHMAcwAgAEEAbgB0AGkAVgBpAHIAdQBzAFAAcgBvAGQAdQBjAHQAIAAtAEUAcgByAG8AcgBWAGEAcgBpAGEAYgBsAGUAIAB3AG0AaQBlAHIAcgBvAHIAIAAtAEUAcgByAG8AcgBBAGMAdABpAG8AbgAgAFMAaQBsAGUAbgB0AGwAeQBDAG8AbgB0AGkAbgB1AGUADQAKAA0ACgAkAHcAbQBpAGUAcgByAG8AcgAgAD0AIAAiAGEAIgANAAoADQAKAGkAZgAgACgAJAB3AG0AaQBlAHIAcgBvAHIAIAAtAG4AZQAgACQAbgB1AGwAbAApACAAewANAAoAIAAgACAAIAAkAEcAZQB0AFMAZQByAHYAaQBjAGUAIAA9ACAARwBlAHQALQBTAGUAcgB2AGkAYwBlACAALQBEAGkAcwBwAGwAYQB5AE4AYQBtAGUAIAAiAEIAaQB0AGQAZQBmAGUAbgBkAGUAcgAgAEUAbgBkAHAAbwBpAG4AdAAqACIADQAKACAAIAAgACAAaQBmACAAKAAkAEcAZQB0AFMAZQByAHYAaQBjAGUAIAAtAG4AZQAgACQAbgB1AGwAbAApACAAewANAAoAIAAgACAAIAAgACAAIAAgACQAQQBWAE4AYQBtAGUAIAA9ACAAIgBBAG4AdABpAG0AYQBsAHcAYQByAGUAIABCAGkAdABkAGUAZgBlAG4AZABlAHIAIABFAG4AZABwAG8AaQBuAHQAIABTAGUAYwB1AHIAaQB0AHkAIABUAG8AbwBsAHMAIgANAAoAIAAgACAAIAAgACAAIAAgACQAQQBWAFUAcABkAGEAdABlAFMAdABhAHQAdQBzACAAPQAgACIAQQAgAGoAbwB1AHIAIAAvACAASQBuAGYAbwAgAG4AZQAgAGYAYQBpAHMAYQBuAHQAIABwAGEAcwAgAGYAbwBpACIADQAKACAAIAAgACAAIAAgACAAIAAkAEEAVgBQAHIAbwB0AGUAYwB0AGkAbwBuACAAPQAgACIAQQBjAHQAaQB2AOkAIAAvACAASQBuAGYAbwAgAG4AZQAgAGYAYQBpAHMAYQBuAHQAIABwAGEAcwAgAGYAbwBpACIADQAKACAAIAAgACAAfQAgAGUAbABzAGUAIAB7AA0ACgAgACAAIAAgACAAIAAgACAAJABBAFYATgBhAG0AZQAgAD0AIAAiAEkAbgBjAG8AbgBuAHUAIAAvACAAUwBlAHIAdgBlAHUAcgAiAA0ACgAgACAAIAAgACAAIAAgACAAJABBAFYAVQBwAGQAYQB0AGUAUwB0AGEAdAB1AHMAIAA9ACAAIgBJAG4AYwBvAG4AbgB1ACIADQAKACAAIAAgACAAIAAgACAAIAAkAEEAVgBQAHIAbwB0AGUAYwB0AGkAbwBuACAAPQAgACIASQBuAGMAbwBuAG4AdQAiAA0ACgB9AA0ACgB9ACAAZQBsAHMAZQAgAHsADQAKACAAIAAgACAASQBmACAAKAAoACQAQQBWAFAAcgBvAGQAdQBjAHQAIAB8ACAATQBlAGEAcwB1AHIAZQAtAE8AYgBqAGUAYwB0ACkALgBjAG8AdQBuAHQAIAAtAGcAdAAgADEAKQAgAHsADQAKACAAIAAgACAAJABBAFYAIAA9ACAARwBlAHQALQBXAG0AaQBPAGIAagBlAGMAdAAgAC0ATgBhAG0AZQBzAHAAYQBjAGUAIAByAG8AbwB0AFwAUwBlAGMAdQByAGkAdAB5AEMAZQBuAHQAZQByADIAIAAtAEMAbABhAHMAcwAgAEEAbgB0AGkAVgBpAHIAdQBzAFAAcgBvAGQAdQBjAHQAIAB8ACAAVwBoAGUAcgBlAC0AbwBiAGoAZQBjAHQAIABkAGkAcwBwAGwAYQB5AE4AYQBtAGUAIAAtAG4AZQAgACIAVwBpAG4AZABvAHcAcwAgAEQAZQBmAGUAbgBkAGUAcgAiACAALQBFAHIAcgBvAHIAVgBhAHIAaQBhAGIAbABlACAAJABlAHIAcgBvAHIAMQANAAoAIAAgACAAIAB9ACAARQBsAHMAZQAgAHsADQAKACAAIAAgACAAIAAgACAAIAAkAEEAVgAgAD0AIAAkAEEAVgBQAHIAbwBkAHUAYwB0AA0ACgAgACAAIAAgAH0ADQAKAA0ACgAgACAAIAAgAHMAdwBpAHQAYwBoACAAKAAkAEEAVgAuAHAAcgBvAGQAdQBjAHQAUwB0AGEAdABlACkAIAB7AA0ACgAgACAAIAAgACAAIAAgACAAIgAyADYAMgAxADQANAAiACAAewAkAFUAcABkAGEAdABlAFMAdABhAHQAdQBzACAAPQAgACIAQQAgAGoAbwB1AHIAIgAgADsAJABSAGUAYQBsAFQAaQBtAGUAUAByAG8AdABlAGMAdABpAG8AbgBTAHQAYQB0AHUAcwAgAD0AIAAiAEQA6QBzAGEAYwB0AGkAdgDpACIAfQANAAoAIAAgACAAIAAgACAAIAAgACIAMgA2ADIAMQA2ADAAIgAgAHsAJABVAHAAZABhAHQAZQBTAHQAYQB0AHUAcwAgAD0AIAAiAFAAYQBzACAA4AAgAGoAbwB1AHIAIgAgADsAJABSAGUAYQBsAFQAaQBtAGUAUAByAG8AdABlAGMAdABpAG8AbgBTAHQAYQB0AHUAcwAgAD0AIAAiAEQA6QBzAGEAYwB0AGkAdgDpACIAfQANAAoAIAAgACAAIAAgACAAIAAgACIAMgA2ADYAMgA0ADAAIgAgAHsAJABVAHAAZABhAHQAZQBTAHQAYQB0AHUAcwAgAD0AIAAiAEEAIABqAG8AdQByACIAIAA7ACQAUgBlAGEAbABUAGkAbQBlAFAAcgBvAHQAZQBjAHQAaQBvAG4AUwB0AGEAdAB1AHMAIAA9ACAAIgBBAGMAdABpAHYA6QAiAH0ADQAKACAAIAAgACAAIAAgACAAIAAiADIANgA2ADIANQA2ACIAIAB7ACQAVQBwAGQAYQB0AGUAUwB0AGEAdAB1AHMAIAA9ACAAIgBQAGEAcwAgAOAAIABqAG8AdQByACIAIAA7ACQAUgBlAGEAbABUAGkAbQBlAFAAcgBvAHQAZQBjAHQAaQBvAG4AUwB0AGEAdAB1AHMAIAA9ACAAIgBBAGMAdABpAHYA6QAiAH0ADQAKACAAIAAgACAAIAAgACAAIAAiADMAOQAzADIAMQA2ACIAIAB7ACQAVQBwAGQAYQB0AGUAUwB0AGEAdAB1AHMAIAA9ACAAIgBBACAAagBvAHUAcgAiACAAOwAkAFIAZQBhAGwAVABpAG0AZQBQAHIAbwB0AGUAYwB0AGkAbwBuAFMAdABhAHQAdQBzACAAPQAgACIARADpAHMAYQBjAHQAaQB2AOkAIgB9AA0ACgAgACAAIAAgACAAIAAgACAAIgAzADkAMwAyADMAMgAiACAAewAkAFUAcABkAGEAdABlAFMAdABhAHQAdQBzACAAPQAgACIAUABhAHMAIADgACAAagBvAHUAcgAiACAAOwAkAFIAZQBhAGwAVABpAG0AZQBQAHIAbwB0AGUAYwB0AGkAbwBuAFMAdABhAHQAdQBzACAAPQAgACIARADpAHMAYQBjAHQAaQB2AOkAIgB9AA0ACgAgACAAIAAgACAAIAAgACAAIgAzADkAMwA0ADgAOAAiACAAewAkAFUAcABkAGEAdABlAFMAdABhAHQAdQBzACAAPQAgACIAUABhAHMAIADgACAAagBvAHUAcgAiACAAOwAkAFIAZQBhAGwAVABpAG0AZQBQAHIAbwB0AGUAYwB0AGkAbwBuAFMAdABhAHQAdQBzACAAPQAgACIARADpAHMAYQBjAHQAaQB2AOkAIgB9AA0ACgAgACAAIAAgACAAIAAgACAAIgAzADkANwAzADEAMgAiACAAewAkAFUAcABkAGEAdABlAFMAdABhAHQAdQBzACAAPQAgACIAQQAgAGoAbwB1AHIAIgAgADsAJABSAGUAYQBsAFQAaQBtAGUAUAByAG8AdABlAGMAdABpAG8AbgBTAHQAYQB0AHUAcwAgAD0AIAAiAEEAYwB0AGkAdgDpACIAfQANAAoAIAAgACAAIAAgACAAIAAgACIAMwA5ADcAMwAyADgAIgAgAHsAJABVAHAAZABhAHQAZQBTAHQAYQB0AHUAcwAgAD0AIAAiAFAAYQBzACAA4AAgAGoAbwB1AHIAIgAgADsAJABSAGUAYQBsAFQAaQBtAGUAUAByAG8AdABlAGMAdABpAG8AbgBTAHQAYQB0AHUAcwAgAD0AIAAiAEEAYwB0AGkAdgDpACIAfQANAAoAIAAgACAAIAAgACAAIAAgACIAMwA5ADcANQA4ADQAIgAgAHsAJABVAHAAZABhAHQAZQBTAHQAYQB0AHUAcwAgAD0AIAAiAFAAYQBzACAA4AAgAGoAbwB1AHIAIgAgADsAJABSAGUAYQBsAFQAaQBtAGUAUAByAG8AdABlAGMAdABpAG8AbgBTAHQAYQB0AHUAcwAgAD0AIAAiAEEAYwB0AGkAdgDpACIAfQANAAoAIAAgACAAIAAgACAAIAAgACIAMwA5ADcANQA2ADgAIgAgAHsAJABVAHAAZABhAHQAZQBTAHQAYQB0AHUAcwAgAD0AIAAiAEEAIABqAG8AdQByACIAOwAgACQAUgBlAGEAbABUAGkAbQBlAFAAcgBvAHQAZQBjAHQAaQBvAG4AUwB0AGEAdAB1AHMAIAA9ACAAIgBBAGMAdABpAHYA6QAiAH0ADQAKACAAIAAgACAAIAAgACAAIAAiADMAOQAzADQANwAyACIAIAB7ACQAVQBwAGQAYQB0AGUAUwB0AGEAdAB1AHMAIAA9ACAAIgBBACAAagBvAHUAcgAiACAAOwAkAFIAZQBhAGwAVABpAG0AZQBQAHIAbwB0AGUAYwB0AGkAbwBuAFMAdABhAHQAdQBzACAAPQAgACIARADpAHMAYQBjAHQAaQB2AOkAIgB9AA0ACgAgACAAIAAgACAAIAAgACAAZABlAGYAYQB1AGwAdAAgAHsAJABVAHAAZABhAHQAZQBTAHQAYQB0AHUAcwAgAD0AIAAiAEkAbgBjAG8AbgBuAHUAIgAgADsAJABSAGUAYQBsAFQAaQBtAGUAUAByAG8AdABlAGMAdABpAG8AbgBTAHQAYQB0AHUAcwAgAD0AIAAiAEkAbgBjAG8AbgBuAHUAIgB9AA0ACgAgACAAIAAgACAAIAAgACAAfQANAAoADQAKACQAQQBWAE4AYQBtAGUAIAA9ACAAJABBAFYALgBkAGkAcwBwAGwAYQB5AG4AYQBtAGUADQAKACQAQQBWAFUAcABkAGEAdABlAFMAdABhAHQAdQBzACAAPQAgACQAVQBwAGQAYQB0AGUAUwB0AGEAdAB1AHMADQAKACQAQQBWAFAAcgBvAHQAZQBjAHQAaQBvAG4AIAA9ACAAJABSAGUAYQBsAFQAaQBtAGUAUAByAG8AdABlAGMAdABpAG8AbgBTAHQAYQB0AHUAcwANAAoADQAKAH0ADQAKAA==">
+          <p:RunPowerShellScript.InArgs>
+            <scg:Dictionary x:TypeArguments="x:String, p:InArg" />
+          </p:RunPowerShellScript.InArgs>
+          <p:RunPowerShellScript.OutArgs>
+            <p:OutArg x:Key="AVName" ArgType="string" DisplayName="AVName" Name="AVName">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_AVName]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="AVUpdateStatus" ArgType="string" DisplayName="AVUpdateStatus" Name="AVUpdateStatus">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_AVUpdateStatus]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="AVProtection" ArgType="string" DisplayName="AVProtection" Name="AVProtection">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_AVProtection]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+          </p:RunPowerShellScript.OutArgs>
+        </p:RunPowerShellScript>
+      </p:PolicySequence.Activities>
+      <p:PolicySequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_OutPut_64" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_ResultString" />
+        <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="RunPowerShellScript_Results_x64" />
+        <Variable x:TypeArguments="x:Double" Name="RunPowerShellScript_Result" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_AVName" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_AVUpdateStatus" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_AVProtection" />
+      </p:PolicySequence.Variables>
+    </p:PolicySequence>
+  </Activity>
+</Policy>

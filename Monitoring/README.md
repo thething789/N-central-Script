@@ -9,3 +9,10 @@ This folder includes custom monitoring scripts for advanced use cases in **N-Cen
 1. Select the monitoring script that fits your requirement.
 2. Upload the script to **N-Central RMM** and attach it to the relevant device or service.
 3. Adjust thresholds or parameters based on your environment.
+
+---
+
+## 📜 Scripts Included
+
+- **Script Name 1**: Brief description.
+- **Script Name 2**: Brief description.
