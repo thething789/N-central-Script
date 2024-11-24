@@ -1,4 +1,4 @@
-# Antivirus Monitoring Script
+# Bitdefender Status Monitoring Script
 
 ## Overview
 
