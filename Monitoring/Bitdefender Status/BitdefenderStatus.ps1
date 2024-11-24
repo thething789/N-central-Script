@@ -1,11 +1,8 @@
 $wmierror = $null
 $GetService = $null
-$AV
+$AV = ""
 
 $AVProduct = Get-WmiObject -Namespace root\SecurityCenter2 -Class AntiVirusProduct -ErrorVariable wmierror -ErrorAction SilentlyContinue
-
-#Comment if you want to user wmi
-$wmierror = "Bypass"
 
 if ($wmierror -ne $null) {
     $GetService = Get-Service -DisplayName "Bitdefender Endpoint*"
