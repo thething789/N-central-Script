@@ -13,5 +13,4 @@ This folder contains scripts designed to automate routine tasks in **N-Central R
 
 ## 📜 Scripts Included
 
-- **Script Name 1**: Brief description.
-- **Script Name 2**: Brief description.
+- **Bitdefender Key to N-Central**: Automating Bitdefender Agent Key Synchronization with N-Central
